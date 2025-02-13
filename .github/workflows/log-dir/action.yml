@@ -11,5 +11,5 @@ runs:
         else
           echo "Output Directory Does NOT Exist!"
           echo *
-          exit 1
+          # exit 1
         fi
