@@ -10,8 +10,8 @@ runs:
           echo "Output Directory Exists."
         else
           echo "Output Directory Does NOT Exist!"
-          for i in * .[^.]*; do
-            echo ">$i<"
+          for item in * .[^.]*; do
+            echo "$item"
           done
           # exit 1
         fi
