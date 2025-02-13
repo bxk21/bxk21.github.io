@@ -5,4 +5,4 @@ runs:
   steps:
     - name: Logs Current Direct
       shell: bash
-      run: echo *
+      run: echo * && echo /*
