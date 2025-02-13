@@ -5,4 +5,11 @@ runs:
   steps:
     - name: Logs Current Direct
       shell: bash
-      run: echo * && echo /*
+      run: |
+        if [ -d /out ]; then
+          echo "Output Directory Exists."
+        else
+          echo "Output Directory Does NOT Exist!"
+          echo *
+          exit 1
+        fi
