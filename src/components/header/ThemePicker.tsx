@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from "next/image";
 
 enum Theme {
@@ -35,9 +35,12 @@ const themeIcons = {
 
 export default function ThemePicker() {
 	const [showDropdown, setShowDropdown] = useState(false);
-
-	const initialTheme = window.matchMedia?.('(prefers-color-scheme: dark)').matches ? Theme.Dark : Theme.Light;
+	const [initialTheme, setInitialTheme] = useState(Theme.Default);
 	const [theme, setTheme] = useState(Theme.Default);
+
+	useEffect(() => {
+		setInitialTheme(window.matchMedia?.('(prefers-color-scheme: dark)').matches ? Theme.Dark : Theme.Light);
+	}, [])
 
 	function changeTheme(clickedTheme: Theme) {
 		const newTheme: Theme = clickedTheme === theme ? Theme.Default : clickedTheme;
