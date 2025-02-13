@@ -1,8 +1,8 @@
 name: log-dir
 description: "Logs the current directory"
 runs:
-    using: "composite"
-    steps:
-        - name: Logs Current Direct
-            shell: bash
-            run: echo *
+  using: "composite"
+  steps:
+    - name: Logs Current Direct
+      shell: bash
+      run: echo *
