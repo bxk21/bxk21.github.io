@@ -62,7 +62,7 @@ export default function ThemePicker() {
 				{themeIcons[theme]}
 				Theme
 			</button>
-			{showDropdown && <ul className="submenu themes-menu  inline-submenu-lg" aria-labelledby="themes-menu-button">
+			{showDropdown && <ul className="absolute" aria-labelledby="themes-menu-button">
 				<li>
 					<button
 						onClick={() => changeTheme(Theme.Light)}>

@@ -39,21 +39,9 @@ img {
 	display: unset;
 }
 
-button {
-	
-}
-
+/* TODO: proper inversion of non grayscale images */
 img:not(.grayscale) {
-
-}
-
-.submenu {
-	position: absolute;
-}
-
-.items-right {
-	margin-left: auto; 
-	margin-right: 0;
+	mix-blend-mode: initial;
 }
 
 /* slides the sidebar out if page is too small */
