@@ -8,6 +8,10 @@ export default function AboutMe() {
 				// frameBorder="0"
 				// scrolling="no"
 			/>
+			<div className='w-full flex justify-between text-sm'>
+				<div/>
+				^ Download
+			</div>
 		</main>
 	);
 }

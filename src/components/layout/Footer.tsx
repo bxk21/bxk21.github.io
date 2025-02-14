@@ -10,6 +10,7 @@ export default function Header() {
 				rel="noopener noreferrer"
 			>
 				<Image
+					className='grayscale'
 					aria-hidden
 					src="/file.svg"
 					alt="File icon"
@@ -25,6 +26,7 @@ export default function Header() {
 				rel="noopener noreferrer"
 			>
 				<Image
+					className='grayscale'
 					aria-hidden
 					src="/window.svg"
 					alt="Window icon"
@@ -40,6 +42,7 @@ export default function Header() {
 				rel="noopener noreferrer"
 			>
 				<Image
+					className='grayscale'
 					aria-hidden
 					src="/globe.svg"
 					alt="Globe icon"

@@ -4,7 +4,7 @@ export default function Home() {
 	return (
 		<main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
 			<Image
-				// className="dark:invert"
+				className='grayscale'
 				src="/next.svg"
 				alt="Next.js logo"
 				width={180}
@@ -30,7 +30,7 @@ export default function Home() {
 					rel="noopener noreferrer"
 				>
 					<Image
-						// className="dark:invert"
+						className='grayscale'
 						src="/vercel.svg"
 						alt="Vercel logomark"
 						width={20}

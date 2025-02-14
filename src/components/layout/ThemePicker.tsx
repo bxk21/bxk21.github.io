@@ -9,18 +9,21 @@ enum Theme {
 }
 
 const defaultThemeIcon = <Image
+	className='grayscale'
 	src="/theme/default.svg"
 	alt="Light Theme Icon"
 	width={20}
 	height={20}
 />
 const lightThemeIcon = <Image
+	className='grayscale'
 	src="/theme/light.svg"
 	alt="Light Theme Icon"
 	width={20}
 	height={20}
 />
 const darkThemeIcon = <Image
+	className='grayscale'
 	src="/theme/dark.svg"
 	alt="Light Theme Icon"
 	width={20}
@@ -62,7 +65,10 @@ export default function ThemePicker() {
 				{themeIcons[theme]}
 				Theme
 			</button>
-			{showDropdown && <ul className="absolute" aria-labelledby="themes-menu-button">
+			<ul aria-labelledby="themes-menu-button"
+				className={`absolute p-1 -ml-1 border rounded-md bg-[--background] border-[--foreground]
+					-mt-8 transition ease-out transform ${showDropdown ? 'translate-y-8' : 'opacity-0 pointer-events-none'}`}
+			>
 				<li>
 					<button
 						onClick={() => changeTheme(Theme.Light)}>
@@ -74,7 +80,7 @@ export default function ThemePicker() {
 						{darkThemeIcon} Dark
 					</button>
 				</li>
-			</ul>}
+			</ul>
 		</div>
 	);
 }

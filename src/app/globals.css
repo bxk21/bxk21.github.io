@@ -2,13 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@custom-variant dark (&:where(.dark, .dark *));
+/* @custom-variant dark (&:where(.dark, .dark *)); */
 
 :root {
 	color-scheme: light dark;
 	--color-scheme: light-dark(white, black);
-	--background: light-dark(#ffffff, #212121);
-	--foreground: light-dark(#171717, #ffffff);
+	--background: light-dark(#bbb, #222);
+	--altBackground: light-dark(#999, #444);
+	--foreground: light-dark(#222, #bbb);
+	--altForeground: light-dark(#444, #999);
 	--primary: light-dark(#00537F, #00537F);
 	--secondary: light-dark(#00537F, #00537F);
 	--success: #198754;
@@ -35,13 +37,11 @@ img {
 	/* color: var(--foreground) !important; */
 	/* filter: invert(calc(var(--color-scheme))); */
 	/* background: var(--foreground); */
-	mix-blend-mode: difference;
 	display: unset;
 }
 
-/* TODO: proper inversion of non grayscale images */
-img:not(.grayscale) {
-	mix-blend-mode: initial;
+img:is(.grayscale) {
+	mix-blend-mode: difference;
 }
 
 /* slides the sidebar out if page is too small */
