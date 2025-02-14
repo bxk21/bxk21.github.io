@@ -4,10 +4,10 @@ export default function AboutMe() {
 	return (
 		<main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
 			<Image
-				src="/photos/IMG_0776.jpg"
+				src="/photos/muse.jpg"
 				alt="Bo Kang"
-				width={265}
-				height={398}
+				width='1000'
+				height='1000'
 				priority
 			/>
 		</main>

@@ -10,24 +10,24 @@ enum Theme {
 
 const defaultThemeIcon = <Image
 	className='grayscale'
-	src="/theme/default.svg"
+	src="/icons/theme/default.svg"
 	alt="Light Theme Icon"
-	width={20}
-	height={20}
+	width='20'
+	height='20'
 />
 const lightThemeIcon = <Image
 	className='grayscale'
-	src="/theme/light.svg"
+	src="/icons/theme/light.svg"
 	alt="Light Theme Icon"
-	width={20}
-	height={20}
+	width='20'
+	height='20'
 />
 const darkThemeIcon = <Image
 	className='grayscale'
-	src="/theme/dark.svg"
+	src="/icons/theme/dark.svg"
 	alt="Light Theme Icon"
-	width={20}
-	height={20}
+	width='20'
+	height='20'
 />;
 
 const themeIcons = {
@@ -58,6 +58,7 @@ export default function ThemePicker() {
 	return (
 		<div>
 			<button
+				className='flex gap-2'
 				// className='rounded-full border border-solid border-white/[.08] transition-colors flex items-center justify-center hover:bg-[#444444] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44'
 				aria-haspopup="menu"
 				onClick={() => setShowDropdown(!showDropdown)}
@@ -70,13 +71,12 @@ export default function ThemePicker() {
 					-mt-8 transition ease-out transform ${showDropdown ? 'translate-y-8' : 'opacity-0 pointer-events-none'}`}
 			>
 				<li>
-					<button
-						onClick={() => changeTheme(Theme.Light)}>
+					<button className='flex gap-2' onClick={() => changeTheme(Theme.Light)}>
 						{lightThemeIcon} Light
 					</button>
 				</li>
 				<li>
-					<button onClick={() => changeTheme(Theme.Dark)}>
+					<button className='flex gap-2' onClick={() => changeTheme(Theme.Dark)}>
 						{darkThemeIcon} Dark
 					</button>
 				</li>

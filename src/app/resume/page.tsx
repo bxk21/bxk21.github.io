@@ -10,7 +10,7 @@ export default function AboutMe() {
 			/>
 			<div className='w-full flex justify-between text-sm'>
 				<div/>
-				^ Download
+				↑ Download
 			</div>
 		</main>
 	);

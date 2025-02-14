@@ -7,10 +7,10 @@
 :root {
 	color-scheme: light dark;
 	--color-scheme: light-dark(white, black);
-	--background: light-dark(#bbb, #222);
-	--altBackground: light-dark(#999, #444);
-	--foreground: light-dark(#222, #bbb);
-	--altForeground: light-dark(#444, #999);
+	--background: light-dark(#bbb, #0d3b1f);
+	--altBackground: light-dark(#999, #03470e);
+	--foreground: light-dark(#00521f, #bbb);
+	--altForeground: light-dark(#113814, #999);
 	--primary: light-dark(#00537F, #00537F);
 	--secondary: light-dark(#00537F, #00537F);
 	--success: #198754;
