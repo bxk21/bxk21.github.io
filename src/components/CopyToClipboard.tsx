@@ -1,22 +1,22 @@
 'use client'
-import Image from "next/image";
+import { IconClipboardCopy } from "@tabler/icons-react";
 
-export default function CopyToClipboard({ data }: { data: string } ) {
+export default function CopyToClipboard({ data, size, className }: { data: string, size?: number, className?: string } ) {
 	return (
-		<button
-			className='flex gap-2 h-min items-center'
-			onClick={() => { navigator.clipboard.writeText(data); }}
-		>
-			<Image
-				className='grayscale peer h-min'
-				src="/icons/copy.svg"
-				alt="Copy Icon"
-				width='10'
-				height='10'
-			/>
-			<div className='text-xs h-min transition-opacity opacity-0 peer-hover:opacity-100'>
+		<div className={`flex gap-2 items-center relative ${className || ''}`}>
+			<button
+				className="peer"
+				onClick={() => { navigator.clipboard.writeText(data); }}
+			>
+				<IconClipboardCopy
+					className='grayscale'
+					aria-label="Copy Icon"
+					size={size || 24}
+				/>
+			</button>
+			<div className='text-xs absolute top-full left-full transition-opacity opacity-0 peer-hover:opacity-100'>
 				Copy To Clipboard
 			</div>
-		</button>
+		</div>
 	);
 }

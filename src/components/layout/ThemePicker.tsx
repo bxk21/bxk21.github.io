@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react';
-import Image from "next/image";
+import { IconMoon, IconSun, IconSunMoon } from '@tabler/icons-react';
 
 enum Theme {
 	Default = 'light dark',
@@ -8,26 +8,20 @@ enum Theme {
 	Dark = 'dark only'
 }
 
-const defaultThemeIcon = <Image
+const defaultThemeIcon = <IconSunMoon
 	className='grayscale'
-	src="/icons/theme/default.svg"
-	alt="Light Theme Icon"
-	width='20'
-	height='20'
+	aria-label="Light Theme Icon"
+	size='20'
 />
-const lightThemeIcon = <Image
+const lightThemeIcon = <IconSun
 	className='grayscale'
-	src="/icons/theme/light.svg"
-	alt="Light Theme Icon"
-	width='20'
-	height='20'
+	aria-label="Light Theme Icon"
+	size='20'
 />
-const darkThemeIcon = <Image
+const darkThemeIcon = <IconMoon
 	className='grayscale'
-	src="/icons/theme/dark.svg"
-	alt="Light Theme Icon"
-	width='20'
-	height='20'
+	aria-label="Light Theme Icon"
+	size='20'
 />;
 
 const themeIcons = {
@@ -56,9 +50,9 @@ export default function ThemePicker() {
 	}
 
 	return (
-		<div>
+		<div className='relative'>
 			<button
-				className='flex gap-2'
+				className='flex items-center gap-2'
 				// className='rounded-full border border-solid border-white/[.08] transition-colors flex items-center justify-center hover:bg-[#444444] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44'
 				aria-haspopup="menu"
 				onClick={() => setShowDropdown(!showDropdown)}
@@ -71,12 +65,12 @@ export default function ThemePicker() {
 					-mt-8 transition ease-out transform ${showDropdown ? 'translate-y-8' : 'opacity-0 pointer-events-none'}`}
 			>
 				<li>
-					<button className='flex gap-2' onClick={() => changeTheme(Theme.Light)}>
+					<button className='flex items-center gap-2' onClick={() => changeTheme(Theme.Light)}>
 						{lightThemeIcon} Light
 					</button>
 				</li>
 				<li>
-					<button className='flex gap-2' onClick={() => changeTheme(Theme.Dark)}>
+					<button className='flex items-center gap-2' onClick={() => changeTheme(Theme.Dark)}>
 						{darkThemeIcon} Dark
 					</button>
 				</li>

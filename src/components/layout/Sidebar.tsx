@@ -1,9 +1,10 @@
+import { IconFileCv, IconPencil } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function SideBar() {
 	return (
-		<div className='w-1/5 bg-[--altBackground] border-[--altForeground] border rounded-md p-4'>
+		<div className='w-1/5 bg-[--accented-background] border-[--altForeground] border rounded-md p-4'>
 			<div className="grid place-items-center">
 				<Image
 					className="border-4 rounded-full"
@@ -24,24 +25,16 @@ export default function SideBar() {
 					</Link>
 				</li>
 				<li className="mb-2">
-					<Link href="./about" className="flex items-center gap-2 hover:underline hover:underline-offset-4">
-						About
-					</Link>
-				</li>
-				<li className="mb-2">
 					<Link href="./contact" className="flex items-center gap-2 hover:underline hover:underline-offset-4">
-						<Image
+						<IconPencil
 							className='grayscale'
-							aria-hidden
-							src="/icons/phone.svg"
-							alt="Phone icon"
-							width='16'
-							height='16'
+							aria-label="Phone icon"
+							size='16'
 						/>
 						Contact
 					</Link>
 				</li>
-				<li className="mb-2">
+				{/* <li className="mb-2">
 					<Link href="https://www.linkedin.com/in/bo-kang-6a5881b2/" className="flex items-center gap-2 hover:underline hover:underline-offset-4">
 						<Image
 							className='grayscale'
@@ -66,18 +59,20 @@ export default function SideBar() {
 						/>
 						Github
 					</Link>
-				</li>
+				</li> */}
 				<li className="mb-2">
 					<Link href="./resume" className="flex items-center gap-2 hover:underline hover:underline-offset-4">
-						<Image
-							className='grayscale'
-							aria-hidden
-							src="/icons/file.svg"
-							alt="File icon"
-							width='16'
-							height='16'
+						<IconFileCv
+							className="grayscale"
+							aria-label="File icon"
+							size='16'
 						/>
 						Resume
+					</Link>
+				</li>
+				<li className="mb-2">
+					<Link href="./about" className="flex items-center gap-2 hover:underline hover:underline-offset-4">
+						About
 					</Link>
 				</li>
 				{/* <li className="mb-2">
